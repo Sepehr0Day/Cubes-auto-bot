@@ -1,0 +1,66 @@
+{
+  "name": "cpp-launcher",
+  "displayName": "C++ Launcher",
+  "description": "Easily compile and run your C++ code with g++!",
+  "version": "0.0.1",
+  "publisher": "Sepehr0Day",
+  "keywords": [
+    "C++",
+    "CPP",
+    "Compiler",
+    "Cpp runner",
+    "Cpp launcher",
+    "launcher",
+    "runner",
+    "run",
+    "g++",
+    "compile"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Sepehr0Day/cpp-launcher.git"
+  },
+  "engines": {
+    "vscode": "^1.88.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "cpp-launcher.compileAndRun",
+        "title": "Compile and Run C++",
+        "icon": {
+          "light": "./icon/light.svg",
+          "dark": "./icon/dark.svg"
+        }
+      }
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "command": "cpp-launcher.compileAndRun",
+          "when": "editorLangId == 'cpp'",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.88.0",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "18.x",
+    "eslint": "^8.57.0",
+    "typescript": "^5.3.3",
+    "@vscode/test-cli": "^0.0.8",
+    "@vscode/test-electron": "^2.3.9"
+  }
+}
