@@ -1,6 +1,6 @@
 # C++ Runner
 
-Easily compile and run your C++ code with g++!
+Easily compile and run your C++ code!
 #### This extension just Linux! 
 
 ## Introduction
