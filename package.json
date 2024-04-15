@@ -1,0 +1,94 @@
+{
+  "name": "cpp-launcher",
+  "displayName": "C++ Launcher",
+  "description": "Easily compile and run your C++ code!",
+  "version": "0.0.2",
+  "icon": "./icon/Icon.png",
+  "publisher": "Sepehr0Day",
+  "keywords": [
+    "C++",
+    "CPP",
+    "cpp",
+    "Compiler",
+    "Cpp runner",
+    "Cpp launcher",
+    "launcher",
+    "runner",
+    "run",
+    "g++",
+    "clang",
+    "compile"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Sepehr0Day/cpp-launcher.git"
+  },
+  "engines": {
+    "vscode": "^1.88.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "cpp-launcher.compileAndRun",
+        "title": "C++ Launcher: Compile and Run C++"
+      },
+      {
+        "command": "cpp-launcher.selectCompiler",
+        "title": "C++ Launcher: Select C++ Compiler"
+      },
+      {
+        "command": "cpp-launcher.setCompilerFlags",
+        "title": "C++ Launcher: Set Compiler Flags"
+      },
+      {
+        "command": "cpp-launcher.resetCompilerFlags",
+        "title": "C++ Launcher: Reset Compiler Flags"
+      },
+      {
+        "command": "cpp-launcher.generateCMakeLists",
+        "title": "C++ Launcher: Generate CMakeLists.txt"
+      },
+      {
+        "command": "cpp-launcher.startDebugging",
+        "title": "C++ Launcher: Start Debugging"
+      },
+      {
+        "command": "cpp-launcher.compileAndRun",
+        "title": "Compile and Run C++",
+        "icon": {
+          "light": "./icon/light.svg",
+          "dark": "./icon/dark.svg"
+      }
+    }
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "command": "cpp-launcher.compileAndRun",
+          "when": "editorLangId == 'cpp'",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test",
+    "postinstall": "node installer.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.88.0",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "18.x",
+    "eslint": "^8.57.0",
+    "typescript": "^5.3.3",
+    "@vscode/test-cli": "^0.0.8",
+    "@vscode/test-electron": "^2.3.9"
+  }
+}
