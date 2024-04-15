@@ -12,6 +12,10 @@ This Visual Studio Code extension allows you to compile and run your C++ code wi
 - Compile and run C++ code with a single click.
 - Works seamlessly within the VSCode environment.
 - Supports Linux operating systems.
+- Support 2 Compiler
+- Generate CMake List
+- Set/Reset Flags
+- Debug Mode
 
 ## Installation
 
